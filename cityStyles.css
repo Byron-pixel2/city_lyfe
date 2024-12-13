@@ -1,0 +1,110 @@
+/* Place your CSS styles in this file */
+/* internal CSS */
+ 
+/* external CSS  */
+
+
+
+h1 {
+	text-align: center;
+	font-family: "Times New Roman", sans-serif;
+	font-weight: heavy;
+	text-transform: uppercase;
+	color: lightblue;
+}
+
+h2 {
+
+	text-align: center;
+	font-family: "Georgia", serif;
+
+
+}
+
+p {
+	color: navy;
+	font-family: Arial, Helvetica, sans-serif;
+	text-shadow: 1px 1px teal;
+	font-size: large;
+
+}
+nav.primary-menu{
+ width: 90%;
+ margin: auto;
+ border: solid 5px #009900;
+ text-align: center;
+ background-color: #00ff00;
+}
+.primary-menu ul{
+/*display: inline-block;*/
+margin: 0; 
+padding: 0;
+display: flex;
+justify-content: center;
+}
+.primary-menu li{
+/*float: left;*/
+list-style-type: none;
+}
+.primary-menu a{
+color: #000;
+text-decoration: none;
+display: block; 
+width: 100px;
+padding: 8px 0;
+border: solid 0 #f00;
+}
+.primary-menu a:hover{
+background-color: #0c0;
+color: #fff;
+}
+label{
+background-color: purple;
+color: gold;
+}
+fieldset{
+	border: solid 5px , teal
+}
+textarea{
+	border: solid 5px, purple
+}
+legend{
+	color: lime;
+	font-family: Arial, Helvetica, sans-serif;
+	text-shadow: 2px 1px blue;
+	text-decoration-line: underline;
+}
+forms{
+	background-image: none;
+}
+ul{
+    color: navy;
+	font-family: Arial, Helvetica, sans-serif;
+	text-shadow: 1px 1px teal;
+	font-size: large;
+}
+li{
+
+    color: navy;
+	font-family: Arial, Helvetica, sans-serif;
+	text-shadow: 1px 1px teal;
+	font-size: large;
+}
+thread{
+    color: navy;
+	font-family: Arial, Helvetica, sans-serif;
+	text-shadow: 1px 1px teal;
+	font-size: large;
+}
+td{
+    color: navy;
+	font-family: Arial, Helvetica, sans-serif;
+	text-shadow: 1px 1px teal;
+	font-size: large;
+}
+tr{
+    color: navy;
+	font-family: Arial, Helvetica, sans-serif;
+	text-shadow: 1px 1px teal;
+	font-size: large;
+}

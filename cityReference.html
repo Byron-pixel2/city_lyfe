@@ -1,0 +1,298 @@
+<!doctype html>
+
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>City Lyfe</title>
+
+  <!-- Load external CSS styles -->
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="imageStyles.css">
+  <link rel="stylesheet" href="xml-file.xml">
+  
+
+  <script src="fetch.js"> </script>
+<link rel="stylesheet" href="cityStyles.css">
+  <!-- how do i keep the hightlight working outside of here -->
+  <style>
+    /* create a grid with six cells find content to put in the cells ring City for them.   */
+    .highlight {
+      background-color: royalblue;
+    }
+
+    .bop {
+      border: solid 10px, navy;
+    }
+
+    .hover {
+      background-color: magenta;
+      color: #fff;
+    }
+
+    .wrapper>div>img {
+      height: auto;
+      display: inline-block;
+      width: auto;
+    }
+    .center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+
+
+    /* nav Css */
+    nav.primary-menu {
+      width: 90%;
+      margin: auto;
+      border: solid 5px, blue;
+      text-align: center;
+      background-color: navy;
+    }
+
+    .primary-menu ul {
+      /*display: inline-block;*/
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+    }
+
+    .primary-menu li {
+      /*float: left;*/
+      list-style-type: none;
+    }
+
+    .primary-menu a {
+      color: red;
+      text-decoration: none;
+      display: block;
+      width: 100px;
+      padding: 8px 0;
+      border: solid 0 #f00;
+    }
+
+    .primary-menu a:hover {
+      background-color: magenta;
+      color: #fff;
+    }
+
+    /* create a forms and add a color picker*/
+    .wrapper {
+      /* Display this div as a grid */
+      display: grid;
+      /* Create two columns, each with a width of auto */
+      grid-template-columns: auto auto auto;
+      /* Create two rows each defined as 1fr (fractional unit) */
+      grid-template-rows: 1fr 1fr;
+      /* The space between each row and column (print designers call this the gutter) */
+      gap: 20px;
+      /* Set the background color to red */
+      background-color: navy;
+      /* Add 10px of padding around the grid */
+      padding: 20px;
+      /* Add place items center   */
+      place-items: center;
+
+      .item1 {
+        grid-row: span 2;
+
+      }
+
+      .item2 {
+        grid-row: span 2;
+
+      }
+
+      .item3 {
+        grid-row: span 2;
+      }
+
+      .item5 {
+        display: none;
+      }
+
+      .item4 {
+        display: none;
+      }
+
+      .item6 {
+        display: none;
+      }
+    }
+
+    /* styling for the ball*/
+    #ball {
+         width: 200px;
+         height: 90px;
+         background-color: rgb(50, 180, 200);
+         border-radius: 2px;
+         position: absolute;
+         text-align: center;
+         padding-top: 20px
+      }
+    .sample {
+      border: 20px solid navy;
+    }
+
+    td {
+      border: 1px solid #000;
+      border-color: green;
+    }
+
+    th {
+      border: 1px solid #000;
+      border-color: green;
+    }
+
+    .remove {
+      display: none;
+    }
+
+    tr:hover {
+      background-color: #A6FFDD;
+    }
+
+    /* This css applies to each div that is a child of .wrapper */
+    .wrapper>div {
+      /* Each child div has a white background color */
+      background-color: teal;
+      background-image: "/images/city4.jpg";
+      /* The text within each child div is centered */
+      text-align:center;
+    }
+
+    .indent {
+      text-indent: 100px;
+    }
+
+    #shape {
+      list-style-type: square;
+    }
+
+
+ 
+    .topnav {
+  overflow: hidden;
+  background-color: #333;
+}
+
+.topnav a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.topnav a.active {
+  background-color: #04AA6D;
+  color: white;
+}
+
+.topnav .icon {
+  display: none;
+}
+
+@media screen and (max-width: 600px) {
+  .topnav a:not(:first-child) {display: none;}
+  .topnav a.icon {
+    float: right;
+    display: block;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .topnav.responsive {position: relative;}
+  .topnav.responsive .icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .topnav.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+}
+footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            width: 100%;
+        }
+  </style>
+
+</head>
+<!-- color magenta -->
+
+<body style="background-color:black;">
+  <div class="topnav" id="myTopnav">
+    <a href="index.html">Home</a>
+    <a href="city_about.html">about</a>
+    <a href="cityMusic.html">Music</a>
+    <a href="cityReference.html" class="active">Reference</a>
+    <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+      <i class="fa fa-bars"></i>
+    </a>
+</div>
+
+
+<script>
+  function myFunction() {
+    var x = document.getElementById("myTopnav");
+    if (x.className === "topnav") {
+      x.className += " responsive";
+    } else {
+      x.className = "topnav";
+    }
+  }
+  </script>
+  <h1>City lyfe</h1>
+  <img class="center" class="image1" src="/images/cityLyfe.jpg"alt="CityLyfe close up."; style="width: 40%;">
+  <h2 class="highlight"> connections  </h2>
+  <p> City Lyfe has also had the pleasure of working alongside industry signed artist she shared the same stage with.
+    She opened up for Dej Loaf, Lil Durk, SinBad, Dice from LaLas full court life, Lil Mo, Joe Torry, Omar Gooding,
+    hosting parties with appearances by Shay Johnson from Love and Hip Hop ATL, Tee Grizzley, and Rich Homie Quan. She
+    also had the honor of performing for one of the largest Hip Hop venues in Phoenix at the Arizona Hip Hop Festival
+    for hip hop day approved by Mayor Greg Stanton. Radio play and interviews include appearances with 101.1 the Beat.
+  </p>
+<!--create the ball-->
+  <div>
+ <!-- For you to get this working, the only thing that needs to change is on line 13 - simply replace the demonstration video with your mp4 video  -->
+
+    <br>
+  <h2 class="highlight"> Insparation</h2>
+  <img class="image3" src="/images/cityLyfeW.jpg"alt="CityLyfe close up." style="float:left">
+  <p> There are several artists that she feels was exemplary in contributing to her sound by exhibiting uniqueness and
+    outstanding leadership. such as: Lauryn Hill, Queen Latifa, MC Lyte, Jay Z, Nas, KRS-One, Run DMC, Funk Master J,
+    Biggie Smalls, and more. The ever going motoivation from her familiy has given City the motivation that its not for
+    the money but for the support that this carrer comes with. Without these talented leaders supporting her music we
+    would have City Lyfe today.</p>
+  <h2 class="highlight"> Perfromances</h2>
+  <p>Not only is City Lyfe outstanding when it comes to recording music but is also very entertaining and engaging when
+    it comes to live performances. The registered ASCAP member has performed in many venues in markets such as: San
+    Diego, Los Angeles, New Mexico, Manhattan, Philadelphia, Tucson, Texas and Baltimore. City's music will continue to
+    touch more as she contiues her carrer reaching the hearts of many. </p>
+ 
+  <img class=image4 src="/images/cityLyfe.jpg"alt="CityLyfe close up." width="40%">
+ 
+  
+</body>
+<footer class=backgroundFun style="text-align:center;">
+  <p><a href="index.html">Home</a> | <a href="city_about.html">About</a> | <a href="cityMusic.html">music</a> | <a href="cityReference.html">reference</a> 
+  <br><br><br>
+  <p>Copyright © - All rights reserved</p>
+</footer>
+
+</html>
